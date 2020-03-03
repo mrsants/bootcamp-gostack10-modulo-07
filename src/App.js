@@ -8,8 +8,9 @@ import './config/ReactotronConfig';
 import GlobalStyle from './styles/global';
 import Header from './components/Header';
 import Routes from './routes';
-import history from './services/history';
+
 import store from './store';
+import history from './services/hystory';
 
 function App() {
   return (
