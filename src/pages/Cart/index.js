@@ -49,9 +49,9 @@ export default function Cart() {
           </thead>
 
           <tbody>
-            {cart.map(product => (
+            {cart.map((product, index) => (
               <tr>
-                <td>
+                <td key={index}>
                   <img src={product.image} alt={product.title} />
                 </td>
                 <td>
