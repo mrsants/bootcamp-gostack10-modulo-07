@@ -9,6 +9,9 @@ import { formatPrice } from '../../util/format';
 import * as CartActions from '../../store/modules/cart/actions';
 import { Container, ProductTable, Total, NoProduct } from './styles';
 
+/**
+ * Página responsável pela carrinho de compras
+ */
 export default function Cart() {
   const total = useSelector(state =>
     formatPrice(
