@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { MdAddShoppingCart } from 'react-icons/md';
-import { useDispatch, useSelector } from 'react-redux';
-import { formatPrice } from '../../util/format';
-import api from '../../services/api';
-import * as CartActions from '../../store/modules/cart/actions';
-import { ProductList } from './styles';
+import React, { useState, useEffect } from "react";
+import { MdAddShoppingCart } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { formatPrice } from "../../util/format";
+import api from "../../services/api";
+import * as CartActions from "../../store/modules/cart/actions";
+import { ProductList } from "./styles";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -20,11 +20,11 @@ export default function Home() {
 
   useEffect(() => {
     async function loadProducts() {
-      const response = await api.get('products');
+      const response = await api.get("products");
 
       const data = response.data.map(product => ({
         ...product,
-        priceFormatted: formatPrice(product.price),
+        priceFormatted: formatPrice(product.price)
       }));
 
       setProducts(data);
@@ -47,7 +47,7 @@ export default function Home() {
 
           <button type="button" onClick={() => handleAddProdut(product.id)}>
             <div>
-              <MdAddShoppingCart size={16} color="#fff" />{' '}
+              <MdAddShoppingCart size={16} color="#fff" />{" "}
               {amount[product.id] ?? 0}
             </div>
             <span>ADICIONAR AO CARRINHO</span>
