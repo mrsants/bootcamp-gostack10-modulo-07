@@ -1,11 +1,7 @@
 import { call, select, put, all, takeLatest } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 import api from '../../../services/api';
-<<<<<<< HEAD
-import history from '../../../services/history';
-=======
 import history from '../../../services/hystory';
->>>>>>> bafa2667bbca0b5b620a78d33ca63fc5cb7a1d89
 import { formatPrice } from '../../../util/format';
 
 import { addToCartSuccess, updateAmountSuccess } from './actions';
